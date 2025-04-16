@@ -103,26 +103,5 @@ After fixing the bug, you should see reasonable outputs:
 - 🧪 Bugs in simulation code can be **subtle** and **statistically misleading**.
 - 🔁 Re-initializing objects per trial is a **best practice** in stochastic simulations.
 
----
 
-## 🧑‍🔬 Challenge for Learners
-
-Try implementing a new `Drunk` type that remembers the last step taken:
-
-```python
-class MemoryDrunk(Drunk):
-    def __init__(self, name=None):
-        super().__init__(name)
-        self.last_step = (0, 0)
-
-    def takeStep(self):
-        # 50% chance to repeat the last step, 50% chance random
-        if random.random() < 0.5 and self.last_step != (0, 0):
-            return self.last_step
-        else:
-            stepChoices = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-            self.last_step = random.choice(stepChoices)
-            return self.last_step
-```
-Compare its drift against UsualDrunk. See what happens when you reuse this drunk vs. recreate it per trial!
 
