@@ -40,3 +40,7 @@ This simulation reflects the randomness of natural reproduction and helps conser
 2. **Reproduction Probability**: Likelihood an individual will reproduce in each generation.
 3. **Stochastic Process**: Use of `random.uniform()` to model probabilistic reproduction.
 4. **Generation-to-Generation Evolution**: Observe how population size changes over multiple generations.
+
+---
+🎥 [Watch the recording here](https://drive.google.com/file/d/1LBfYSOhLTDPorjLwlZRvDGtpgmMY8VvS/view?usp=sharing)
+
