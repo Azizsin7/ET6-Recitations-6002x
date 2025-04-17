@@ -50,7 +50,7 @@ Don’t lose the generality.
 (e.g., if the first step was east, the second step is west).
 
 Sample space: 
-- S2 = { (E,E), (E,W), (E,N), (E,S), (W,E), (W,W), (W,N), (W,S), (N,E), (N,W), (N,N), (N,S), (S,E), (S,W), (S,N), (S,S) }
+- S2 = { (E,E), **(E,W)**, (E,N), (E,S), **(W,E)**, (W,W), (W,N), (W,S), (N,E), (N,W), (N,N), **(N,S)**, (S,E), (S,W), **(S,N)**, (S,S) }
 
 - 4/16 = 1/4 = 25%
   <p align="center">
@@ -65,7 +65,7 @@ Sample space:
 - Reason: Homer moves two units in the same direction as the first step  
   (e.g., two steps east or two steps west).
 - Sample space:
-- S2 = {(E, E), (E, W), (E, N), (E, S), (W, E), (W, W), (W, N), (W, S), (N, E), (N, W), (N, N), (N, S), (S, E), (S, W), (S, N), (S, S) }
+- S2 = {**(E, E)**, (E, W), (E, N), (E, S), (W, E), **(W, W)**, (W, N), (W, S), (N, E), (N, W), **(N, N)**, (N, S), (S, E), (S, W), (S, N), **(S, S)** }
 
 - 4/16 = 1/4 = 25%
 
@@ -77,7 +77,7 @@ Sample space:
 - Reason: Homer moves in a direction perpendicular to the first step  
   (e.g., if the first step was east, the second step is north or south).
 - Sample space:
-- S2 = {(E, E), (E, W), (E, N), (E, S), (W, E), (W, W), (W, N), (W, S), (N, E), (N, W), (N, N), (N, S), (S, E), (S, W), (S, N), (S, S) }
+- S2 = {(E, E), (E, W), **(E, N)**, **(E, S)**, **(W, E)**, (W, W), **(W, N)**, **(W, S)**, **(N, E)**, **(N, W)**, (N, N), (N, S), **(S, E)**, **(S, W)**, (S, N), (S, S) }
 - 8/16 = 1/2 = 50%
   
  <p align="center">
