@@ -119,6 +119,31 @@ Your task is to:
 - Decide **which drunk** most likely generated each plot.
 - **Do NOT guess randomly** — base your judgment on the movement characteristics shown in lecture.
 
+<table>
+  <tr>
+    <td><img src="https://github.com/MIT-Emerging-Talent/ET6-Recitations-6002x/blob/main/Session_04/images/1.png" width="450"/></td>
+    <td><img src="https://github.com/MIT-Emerging-Talent/ET6-Recitations-6002x/blob/main/Session_04/images/2.png" width="450"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Plot 1</strong></td>
+    <td align="center"><strong>Plot 2</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/MIT-Emerging-Talent/ET6-Recitations-6002x/blob/main/Session_04/images/3.png" width="450"/></td>
+    <td><img src="https://github.com/MIT-Emerging-Talent/ET6-Recitations-6002x/blob/main/Session_04/images/4.png" width="450"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Plot 3</strong></td>
+    <td align="center"><strong>Plot 4</strong></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://github.com/MIT-Emerging-Talent/ET6-Recitations-6002x/blob/main/Session_04/images/5.png" width="450"/><br/>
+      <strong>Plot 5</strong>
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## 🧪 Breakout Room Instructions
@@ -150,8 +175,6 @@ You must submit **one final mapping** of plots to drunks.
 - Plot 3 → ???
 - Plot 4 → ???
 - Plot 5 → ???
-
-*(*The instructor will display these during the session.*)*
 
 ---
 
