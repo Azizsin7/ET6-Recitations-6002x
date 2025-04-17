@@ -157,7 +157,6 @@ Each group will receive the same 5 plots.
 
 Use the full 15 minutes to discuss, debate, and come to a consensus.
 
-You must submit **one final mapping** of plots to drunks.
 
 ---
 
@@ -180,7 +179,7 @@ You must submit **one final mapping** of plots to drunks.
 
 ## 🏁 Main Room Final Round
 
-After 15 minutes, both groups return to the main room. You will:
+After 30 minutes, both groups return to the main room. You will:
 
 - Present your decisions  
 - Defend your reasoning  
