@@ -118,12 +118,9 @@ def A():
 <details>
 <summary>🔎 Answer & Explanation</summary>
 
-**✅ Answer: True**  
-**Explanation:**  
-The behavior of the function depends on whether `random.random()` returns a value above 0.99. Since this is not guaranteed, the number of iterations — and thus the output — is stochastic.
-
+**❌ Answer: False**  
+**Explanation:** Despite using random.random() initially, the seed is reset inside the loop, making the outcome consistent every time. The condition for r rarely changes, and even if it does, it produces deterministic output due to the fixed seed.
 </details>
-
 ---
 
 ## ❓ Problem 5  
@@ -155,18 +152,19 @@ Even in a fully connected graph, an indirect path may be shorter if its total we
 
 **✅ Answer: 2/27**  
 **Explanation:**  
-There are \(6^3 = 216\) total outcomes when rolling a die 3 times.  
-Number of outcomes with exactly two 6s = \( inom{3}{2} 	imes 5 = 3 	imes 5 = 15 \)  
+There are 6³ = 216 total outcomes when rolling a die three times.  
+Number of outcomes with exactly two 6s = (3 choose 2) × 5 = 3 × 5 = 15  
 Number of outcomes with three 6s = 1  
-Total favorable = 15 + 1 = 16  
-So, probability = 16/216 = **2/27**
+Total favorable outcomes = 15 + 1 = 16  
+Probability = 16 / 216 = **2/27**
+
 
 </details>
 
 ---
 
 ## ❓ Problem 7  
-**A greedy optimization algorithm**
+**A greedy optimization algorithm is typically efficient in time.**
 
 **Level:** ⭐  
 **Tags:** `#greedy` `#efficiency`
@@ -174,7 +172,7 @@ So, probability = 16/216 = **2/27**
 <details>
 <summary>🔎 Answer & Explanation</summary>
 
-**✅ Answer: is typically efficient in time.**  
+**✅ Answer:True**  
 **Explanation:**  
 Greedy algorithms are designed to make local optimal choices at each step, usually resulting in low computational cost. However, they don't always produce globally optimal solutions.
 
