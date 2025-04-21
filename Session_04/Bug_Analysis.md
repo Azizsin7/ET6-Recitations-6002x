@@ -87,12 +87,6 @@ After fixing the bug, you should see reasonable outputs:
 | 1000   | ~31.6        | ~27.1            | ~53.5            |
 | 10000  | ~100         | ~90.6            | ~495             |
 
----
-
-## 🧭 Observations
-
-- `UsualDrunk` follows √N growth as expected from an **unbiased 2D random walk**.
-- `ColdDrunk` shows **faster displacement** due to a **vertical bias** in its step choices.
 
 ---
 
