@@ -155,7 +155,7 @@ You will be split into **2 groups**:
 
 Each group will receive the same 5 plots.
 
-Use the full 15 minutes to discuss, debate, and come to a consensus.
+Use the full 30 minutes to discuss, debate, and come to a consensus.
 
 
 ---
