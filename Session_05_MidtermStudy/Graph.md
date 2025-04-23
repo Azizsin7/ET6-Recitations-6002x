@@ -1,4 +1,4 @@
-## ❓ Problem 7 – Graph Structures from Code
+## ❓ Graph Structures from Code
 
 In each code snippet, examine how edges are added and identify the type of graph that results.  
 **Possible graph types:**
@@ -10,7 +10,7 @@ In each code snippet, examine how edges are added and identify the type of graph
 
 ---
 
-🔹 Problem 7-1
+🔹 Problem 1
 ```python
 for i in range(len(nodes)):
     x = random.choice(nodes)
@@ -24,7 +24,7 @@ Explanation: Edges are added in one direction only (from x to y), and random pai
 
 </details>
 
-🔹 Problem 7-2
+🔹 Problem 2
 ```python
 for i in range(len(nodes)):
     x = random.choice(nodes)
@@ -39,7 +39,7 @@ Explanation: For each random pair of nodes (x, y), two edges are added in both d
 
 </details>
 
-🔹 Problem 7-3
+🔹 Problem 3
 ```python
 for i in range(len(nodes)):
     w = random.choice(nodes)
@@ -61,7 +61,7 @@ Explanation: This code adds multiple separate 4-node cycles randomly — not one
 
 </details>
 
- Problem 7-4
+ Problem 4
 
 ```python
 for x in nodes:
@@ -77,7 +77,7 @@ Explanation: This double loop connects every node to every other node in both di
 
 </details>
 
-🔹 Problem 7-5
+🔹 Problem 5
 Which graph has the largest out-degree per node?
 
 <details> <summary>🔎 Answer & Explanation</summary>
