@@ -121,6 +121,8 @@ def A():
 **❌ Answer: False**  
 **Explanation:** Despite using random.random() initially, the seed is reset inside the loop, making the outcome consistent every time. The condition for r rarely changes, and even if it does, it produces deterministic output due to the fixed seed.
 </details>
+
+
 ---
 
 ## ❓ Problem 5  
@@ -152,12 +154,51 @@ Even in a fully connected graph, an indirect path may be shorter if its total we
 
 **✅ Answer: 2/27**  
 **Explanation:**  
-There are 6³ = 216 total outcomes when rolling a die three times.  
-Number of outcomes with exactly two 6s = (3 choose 2) × 5 = 3 × 5 = 15  
-Number of outcomes with three 6s = 1  
-Total favorable outcomes = 15 + 1 = 16  
-Probability = 16 / 216 = **2/27**
+## 📝 Summary of Steps – Probability of Rolling at Least Two 6s (3 rolls)
 
+1. **Total Outcomes:**
+   - When rolling a die 3 times, there are:
+6 × 6 × 6 = 216 total possible outcomes.
+
+
+---
+
+2. **Break into Cases:**
+
+- **Case A:** Exactly **two 6s**.  
+- **Case B:** Exactly **three 6s**.
+
+---
+
+3. **Case A: Exactly two 6s**
+
+- **Step 1:** Choose **2 positions** for the 6s:
+C(3, 2) = 3 ways
+
+- **Step 2:** The **remaining position** must **not be a 6**:
+  - Possible values = **1, 2, 3, 4, 5** → **5 options**.
+
+- **Total outcomes for Case A:**
+3 × 5 = 15 favorable outcomes
+
+---
+
+4. **Case B: Exactly three 6s**
+
+- Only **one outcome**:
+(6, 6, 6)
+
+
+---
+
+5. **Total favorable outcomes:**
+15 (Case A) + 1 (Case B) = 16
+
+
+---
+
+6. **Calculate the probability:**
+Probability = favorable / total = 16 / 216 = 2 / 27
 
 </details>
 
