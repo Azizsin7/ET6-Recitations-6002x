@@ -42,7 +42,7 @@ def f(x):
     return int(x + random.choice([0.25, 0.5, 0.75]))
 ```
 
-**Level:** ⭐  
+**Level:** ⭐⭐ 
 **Tags:** `#random` `#typecasting` `#stochastic`
 
 <details>
@@ -60,7 +60,7 @@ Although `random.choice()` is random, each option rounds down to 0 when cast to 
 <a name="problem-1-2"></a>  
 **In Python, we can use `random.seed(100)` at the beginning of a program to generate the same sequence of random numbers each time we run the program.**
 
-**Level:** ⭐  
+**Level:** ⭐⭐  
 **Tags:** `#random` `#reproducibility`
 
 <details>
@@ -78,7 +78,7 @@ Seeding the random number generator ensures the same sequence of values across r
 <a name="problem-1-3"></a>  
 **A brute force solution to the 0/1 knapsack problem will always produce an optimal solution.**
 
-**Level:** ⭐⭐  
+**Level:** ⭐  
 **Tags:** `#bruteforce` `#knapsack` `#optimization`
 
 <details>
