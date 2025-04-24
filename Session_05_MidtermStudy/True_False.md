@@ -18,21 +18,6 @@ Try each question before expanding the hidden answers.
 
 ---
 
-
-## 📚 Table of Contents
-
-1. [Problem 1 – Stochastic Function & Int Cast](#problem-1)  
-2. [Problem 2 – Random Seed for Reproducibility](#problem-2)  
-3. [Problem 3 – Brute Force & Knapsack](#problem-3)  
-4. [Problem 4 – Seeding in Loops](#problem-4)  
-5. [Problem 5 – Graph & Shortest Path](#problem-5)  
-6. [Problem 6 – Probability of Rolling 6s](#problem-6)  
-7. [Problem 7 – Greedy Algorithms](#problem-7)  
-8. [Problem 8 – BFS in Weighted Graphs](#problem-8)  
-9. [Problem 9 – Deterministic Functions (F & G)](#problem-9)
-
----
-
 ## ❓ Problem 1  
 <a name="problem-1-1"></a>  
 **The following function is stochastic:**  
@@ -42,7 +27,7 @@ def f(x):
     return int(x + random.choice([0.25, 0.5, 0.75]))
 ```
 
-**Level:** ⭐  
+**Level:** ⭐⭐ 
 **Tags:** `#random` `#typecasting` `#stochastic`
 
 <details>
@@ -60,7 +45,7 @@ Although `random.choice()` is random, each option rounds down to 0 when cast to 
 <a name="problem-1-2"></a>  
 **In Python, we can use `random.seed(100)` at the beginning of a program to generate the same sequence of random numbers each time we run the program.**
 
-**Level:** ⭐  
+**Level:** ⭐⭐  
 **Tags:** `#random` `#reproducibility`
 
 <details>
@@ -78,7 +63,7 @@ Seeding the random number generator ensures the same sequence of values across r
 <a name="problem-1-3"></a>  
 **A brute force solution to the 0/1 knapsack problem will always produce an optimal solution.**
 
-**Level:** ⭐⭐  
+**Level:** ⭐  
 **Tags:** `#bruteforce` `#knapsack` `#optimization`
 
 <details>
@@ -121,6 +106,8 @@ def A():
 **❌ Answer: False**  
 **Explanation:** Despite using random.random() initially, the seed is reset inside the loop, making the outcome consistent every time. The condition for r rarely changes, and even if it does, it produces deterministic output due to the fixed seed.
 </details>
+
+
 ---
 
 ## ❓ Problem 5  
@@ -152,12 +139,51 @@ Even in a fully connected graph, an indirect path may be shorter if its total we
 
 **✅ Answer: 2/27**  
 **Explanation:**  
-There are 6³ = 216 total outcomes when rolling a die three times.  
-Number of outcomes with exactly two 6s = (3 choose 2) × 5 = 3 × 5 = 15  
-Number of outcomes with three 6s = 1  
-Total favorable outcomes = 15 + 1 = 16  
-Probability = 16 / 216 = **2/27**
+## 📝 Summary of Steps – Probability of Rolling at Least Two 6s (3 rolls)
 
+1. **Total Outcomes:**
+   - When rolling a die 3 times, there are:
+6 × 6 × 6 = 216 total possible outcomes.
+
+
+---
+
+2. **Break into Cases:**
+
+- **Case A:** Exactly **two 6s**.  
+- **Case B:** Exactly **three 6s**.
+
+---
+
+3. **Case A: Exactly two 6s**
+
+- **Step 1:** Choose **2 positions** for the 6s:
+C(3, 2) = 3 ways
+
+- **Step 2:** The **remaining position** must **not be a 6**:
+  - Possible values = **1, 2, 3, 4, 5** → **5 options**.
+
+- **Total outcomes for Case A:**
+3 × 5 = 15 favorable outcomes
+
+---
+
+4. **Case B: Exactly three 6s**
+
+- Only **one outcome**:
+(6, 6, 6)
+
+
+---
+
+5. **Total favorable outcomes:**
+15 (Case A) + 1 (Case B) = 16
+
+
+---
+
+6. **Calculate the probability:**
+Probability = favorable / total = 16 / 216 = 2 / 27
 
 </details>
 
