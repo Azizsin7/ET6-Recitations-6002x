@@ -62,7 +62,7 @@ Explanation: This code adds multiple separate 4-node cycles randomly — not one
 
 </details>
 
- Problem 4
+🔹Problem 4
 
 ```python
 for x in nodes:
@@ -79,7 +79,8 @@ Explanation: This double loop connects every node to every other node in both di
 
 </details>
 
-🔹 Problem 5:
+ 
+🔹Problem 5:
 
 Which graph has the largest out-degree per node?
 
