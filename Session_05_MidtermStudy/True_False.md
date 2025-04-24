@@ -18,21 +18,6 @@ Try each question before expanding the hidden answers.
 
 ---
 
-## 📚 Table of Contents
-
-1. [Problem 1 – Stochastic Function & Int Cast](#problem-1--stochastic-function--int-cast)
-2. [Problem 2 – Random Seed for Reproducibility](#problem-2--random-seed-for-reproducibility)
-3. [Problem 3 – Brute Force & Knapsack](#problem-3--brute-force--knapsack)
-4. [Problem 4 – Seeding in Loops](#problem-4--seeding-in-loops)
-5. [Problem 5 – Graph & Shortest Path](#problem-5--graph--shortest-path)
-6. [Problem 6 – Probability of Rolling 6s](#problem-6--probability-of-rolling-6s)
-7. [Problem 7 – Greedy Algorithms](#problem-7--greedy-algorithms)
-8. [Problem 8 – BFS in Weighted Graphs](#problem-8--bfs-in-weighted-graphs)
-9. [Problem 9 – Deterministic Functions (F & G)](#problem-9--deterministic-functions-f--g)
-
-
----
-
 ## ❓ Problem 1  
 <a name="problem-1-1"></a>  
 **The following function is stochastic:**  
