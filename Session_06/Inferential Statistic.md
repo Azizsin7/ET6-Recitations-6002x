@@ -188,7 +188,21 @@ Although CV and confidence intervals are different tools, they are **conceptuall
 > So, **higher CV = lower sampling confidence unless sample size increases.**
 
 ---
-## 📏 8. Empirical Rule (for Normal Distribution)
+### 📦 8. Types of Data Distributions
+
+| Distribution Type | Shape         | Example                            | Real-World Insight                                  |
+|-------------------|---------------|-------------------------------------|-----------------------------------------------------|
+| **Uniform**       | Flat/Rectangular | Rolling a fair die                 | Every outcome is equally likely                     |
+| **Normal**        | Bell-shaped   | Heights, test scores, IQ scores     | Most values are near the mean; fewer at extremes    |
+| **Skewed Right**  | Long tail to the right | Income distribution               | Most values are low, a few are very high            |
+| **Skewed Left**   | Long tail to the left  | Retirement age, death rates       | Most values are high, a few are very low            |
+| **Exponential**   | Rapid decay   | Time between arrivals or decays     | Many short durations, few long ones                 |
+
+Understanding distribution shape helps determine which tools (e.g., CI, SD) are appropriate.
+
+---
+
+## 📏 9. Empirical Rule (for Normal Distribution)
 
 - 68% of values fall within **±1 SD**
 - 95% within **±2 SD**
@@ -197,34 +211,18 @@ Although CV and confidence intervals are different tools, they are **conceptuall
 Helps to construct confidence intervals and interpret normal distributions.
 
 **Why it Matters**
+- Applies when data is normally distributed (bell-shaped).
+- Visual rule of thumb:
+  - 68% of data falls within 1 SD
+  - 95% within 2 SD
+  - 99.7% within 3 SD
+- Useful for checking if a data point is “unusual.”
+
+- Example: If test scores have a mean of 70 and SD of 10:
+  - 95% of scores fall between 50 and 90
 ---
 
-## 📦 9. Types of Data Distributions
-
-| Distribution | Example | Shape |
-|--------------|---------|-------|
-| **Uniform** | Rolling a fair die | Flat |
-| **Normal** | Heights, test scores | Bell curve |
-| **Exponential** | Time between radioactive decays | Right-skewed |
-
-Understanding distribution shape helps determine which tools (e.g., CI, SD) are appropriate.
-
-**Why it Matters**
----
-
-## 🎲 10. Application: Longest Run Simulation (Activity Preview)
-
-- Simulate random outcomes (like dice rolls)
-- Analyze variation across repeated samples
-- Visualizes key concepts like:
-  - Sampling
-  - Random variation
-  - Empirical distribution
-
-**Why it Matters**
----
-
-## 📌 Summary of Key Takeaways
+## 📌 Summary 
 
 - Sampling introduces uncertainty — **we need tools like SD, CI, and CV** to quantify it.
 - **Larger samples** reduce uncertainty.
