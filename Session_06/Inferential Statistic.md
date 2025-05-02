@@ -1,7 +1,5 @@
-# 🧠 Recitation #6 Lecture Notes: Inferential Statistics & Probability
+# 🧠 Inferential Statistics & Probability
 
-**MITx 6.00.2x — Introduction to Computational Thinking and Data Science**  
-Facilitator: *Somaia Zabihi*
 
 ---
 
