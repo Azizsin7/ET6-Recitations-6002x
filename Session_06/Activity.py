@@ -1,3 +1,10 @@
+"""
+Created on Thu May  1 13:36:58 2025
+
+@author: somai
+"""
+import matplotlib.pyplot as plt
+import seaborn as sns
 import numpy as np
 import random
 
@@ -48,3 +55,27 @@ print("\nHigh Variation Sample:")
 print("Mean:", mean_high)
 print("SD:", sd_high)
 print("95% Confidence Interval:", ci_high)
+
+# Already defined: sample_low, sample_high
+# Already computed: mean_low, ci_low, mean_high, ci_high
+
+# Low variance sample
+plt.figure(figsize=(10, 4))
+sns.histplot(sample_low, kde=True, color='skyblue', bins=8)
+plt.axvline(mean_low, color='blue', linestyle='--', label='Mean')
+plt.axvline(ci_low[0], color='gray', linestyle=':', label='95% CI bounds')
+plt.axvline(ci_low[1], color='gray', linestyle=':')
+plt.title("Low-Variance Sample Distribution")
+plt.legend()
+plt.show()
+
+# High variance sample
+plt.figure(figsize=(10, 4))
+sns.histplot(sample_high, kde=True, color='salmon', bins=8)
+plt.axvline(mean_high, color='red', linestyle='--', label='Mean')
+plt.axvline(ci_high[0], color='gray', linestyle=':', label='95% CI bounds')
+plt.axvline(ci_high[1], color='gray', linestyle=':')
+plt.title("High-Variance Sample Distribution")
+plt.legend()
+plt.show()
+
