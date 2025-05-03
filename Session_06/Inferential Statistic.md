@@ -19,6 +19,9 @@ This session introduces essential statistical concepts for understanding how dat
 - Example: You don’t know everyone’s opinion in a country, but you ask 1000 people in a survey and use that to guess what the whole population might think.
 - It’s powerful but risky — that’s why we need probability to estimate how confident we are in our guesses.
 
+  ![Inferential Statistics](Images/2.png)
+
+
 ---
 
 ## 📈 2. Law of Large Numbers (LLN)
@@ -115,8 +118,12 @@ But in this course, we work mostly with **full datasets or simulated data**, so 
 - **Standard Deviation (σ)**: how far data values are spread around the mean.
   - Low SD → data is clustered
   - High SD → data is spread out
- 
- **Why it Matters**
+
+![Mean](Images/mean.png)
+
+---
+
+![Standard Divition](Images/SD.png)
 
 ---
 
@@ -220,6 +227,9 @@ Helps to construct confidence intervals and interpret normal distributions.
 
 - Example: If test scores have a mean of 70 and SD of 10:
   - 95% of scores fall between 50 and 90
+ 
+![Emprical Rule](Images/emp.png)
+
 ---
 
 ## 📌 Summary 
