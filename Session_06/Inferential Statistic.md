@@ -286,4 +286,4 @@ The **Empirical Rule** describes how data is distributed in a **normal (bell-sha
 
 ---
 
-> 📢 *Next up*: Apply these ideas in code! Open the activity notebook to simulate sampling and visualize results.
+> 📢 *Next up*: Apply these ideas in code! Open the activity to simulate sampling and visualize results.
