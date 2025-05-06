@@ -7,6 +7,8 @@ Created on Thu May  1 13:36:58 2025
 
 @author: somai
 """
+import matplotlib.pyplot as plt
+import seaborn as sns
 import numpy as np
 import random
 
@@ -37,9 +39,6 @@ print(f"Mean = {mean_low:.2f}, SD = {sd_low:.2f}, 95% CI = {ci_low}")
 print("\nHigh Variance Sample:")
 print(f"Mean = {mean_high:.2f}, SD = {sd_high:.2f}, 95% CI = {ci_high}")
 
-
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Already defined: sample_low, sample_high
 # Already computed: mean_low, ci_low, mean_high, ci_high
