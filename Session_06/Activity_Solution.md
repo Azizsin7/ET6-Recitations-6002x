@@ -110,6 +110,7 @@ A larger SD increases the **margin of error**, resulting in a **wider interval**
 **Why?**
 
 - The margin of error in the CI formula shrinks as `n` increases:
+  
   Margin of error ∝ 1 / √n
 
 - Larger samples reduce randomness and improve estimate accuracy.
