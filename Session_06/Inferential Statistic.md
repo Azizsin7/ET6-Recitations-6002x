@@ -244,24 +244,34 @@ Understanding distribution shape helps determine which tools (e.g., CI, SD) are 
 
 ---
 
-## 📏 9. Empirical Rule (for Normal Distribution)
+## 📈 9. Empirical Rule (for Normal Distributions)
 
-- 68% of values fall within **±1 SD**
-- 95% within **±2 SD**
-- 99.7% within **±3 SD**
+The **Empirical Rule** describes how data is distributed in a **normal (bell-shaped) distribution**.
 
-Helps to construct confidence intervals and interpret normal distributions.
 
-**Why it Matters**
-- Applies when data is normally distributed (bell-shaped).
-- Visual rule of thumb:
-  - 68% of data falls within 1 SD
-  - 95% within 2 SD
-  - 99.7% within 3 SD
-- Useful for checking if a data point is “unusual.”
+### 🔢 Key Percentages
 
-- Example: If test scores have a mean of 70 and SD of 10:
-  - 95% of scores fall between 50 and 90
+- **68%** of values fall within **±1 standard deviation (SD)** of the mean  
+- **95%** fall within **±2 SD**  
+- **99.7%** fall within **±3 SD**
+
+ 🎯 Why It Matters
+
+- Helps you **interpret the spread** of values in a normal distribution  
+- Useful for **estimating confidence intervals** without formal calculations  
+- Lets you quickly judge whether a data point is **typical or unusual**
+
+
+### 📊 Visual Rule of Thumb
+
+| Range              | Coverage | Interpretation                   |
+|--------------------|----------|----------------------------------|
+| Mean ± 1 SD        | ~68%     | Most values are close to the mean |
+| Mean ± 2 SD        | ~95%     | Almost all values are here       |
+| Mean ± 3 SD        | ~99.7%   | Extremely rare values outside this range |
+
+
+
  
 ![Emprical Rule](Images/emp.png)
 
