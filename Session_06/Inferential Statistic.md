@@ -181,7 +181,7 @@ We use **CV** when we need to:
 
 - This shows that the **Math test is more stable**, and students perform more uniformly on it — something we **couldn't tell by looking at the SD alone**.
 
-### 💬 Summary for Learners
+### 💬 In Summary 
 
 > “Use CV when you want to compare **how consistent or risky** different datasets are — even if they’re on **different scales or units**.  
 > CV makes variation **relative**, not absolute.”
@@ -224,12 +224,10 @@ Although CV and confidence intervals are different tools, they are **conceptuall
 - This means your **confidence interval will be wider**, unless you compensate with a **larger sample size**.
 - When CV is low, sampling results are more stable → **more precise estimates** with **smaller samples**.
 
-
-### 💡 Summary 
-
-> **CV tells us how variable the data is, relative to its size.**  
-> When CV is high, we need **larger samples** to reach the same level of confidence in our results.  
-> So, **higher CV = lower sampling confidence unless sample size increases.**
+💡 **In Summary**
+>
+> - **Higher CV** → more variability → less reliable sample means → **wider confidence intervals**
+> - **Lower CV** → more stable sampling → more precise estimates → **narrower confidence intervals (even with small samples)**
 
 ---
 ### 📦 8. Types of Data Distributions
