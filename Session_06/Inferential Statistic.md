@@ -123,8 +123,6 @@ Where:
 
 In real-world statistics, we divide by **(n - 1)** when calculating sample variance (this is called **Bessel’s correction**) to avoid underestimating the true population variability.
 
-> But in this course, we usually work with **full datasets or simulations**, so we use the **simplified version with `n`**.
-
 
 ### 💬 In Summary:
 
@@ -148,28 +146,46 @@ In real-world statistics, we divide by **(n - 1)** when calculating sample varia
 
 ---
 
-## 🔄 6. Coefficient of Variation (CV)
+## 📊 5. Coefficient of Variation (CV)
 
-- The **Coefficient of Variation (CV)** measures how much variability exists in relation to the mean:
+> **CV = Standard Deviation ÷ Mean**
 
- **CV = Standard Deviation / Mean**
-- **Dimensionless** (no units) → useful for comparing variability across datasets with different scales.
-- - A **high CV** means the data is highly spread out relative to the mean.
-- A **low CV** means the data is more consistent and concentrated around the mean.
-- Example:
-  - Data A: Mean = 50, SD = 5 → CV = 0.1
-  - Data B: Mean = 100, SD = 10 → CV = 0.1
-  - Equal relative variation, even though absolute SD differs.
+The **coefficient of variation** shows **how much variability there is relative to the size of the mean**. It helps us compare the **reliability or consistency** of datasets, especially when they have **different scales or units**.
 
- **Why it Matters**
- - When comparing two datasets with very different scales, SD alone can be misleading.
- - CV = SD / Mean lets you compare variability as a percentage of the mean.
- - Example:
-   - Dataset A: Mean = 10, SD = 2 → CV = 0.2 → 20% variation
-   - Dataset B: Mean = 1000, SD = 50 → CV = 0.05 → only 5% variation
-  - Use when:
-    - Comparing salaries across countries
-    - Comparing variability in different units (test scores vs. product quality)
+
+### 🧠 Why Do We Need CV?
+
+Standard deviation alone tells us how spread out the data is — but it depends on the unit and scale of the data.  
+We use **CV** when we need to:
+
+- Compare **variation across different datasets**
+- Work with data that has **different units or scales**
+- Understand the **relative risk or inconsistency** in measurements
+
+### 📘 Real-Life Example: Comparing Exam Scores
+
+| Exam         | Mean Score | SD  | CV = SD / Mean |
+|--------------|------------|-----|----------------|
+| Math Exam    | 80         | 4   | 0.05 (5%)      |
+| English Exam | 20         | 4   | 0.20 (20%)     |
+
+
+- The scale of scores is different:
+    - Math scores are out of 100
+    - English scores are out of 25
+
+- Even though both exams have the **same standard deviation**, the **variation relative to the mean is very different**.
+
+    - The **Math exam** scores are very consistent (low variation compared to mean).
+    - The **English exam** scores are much more spread out (higher relative variation).
+
+- This shows that the **Math test is more stable**, and students perform more uniformly on it — something we **couldn't tell by looking at the SD alone**.
+
+### 💬 Summary for Learners
+
+> “Use CV when you want to compare **how consistent or risky** different datasets are — even if they’re on **different scales or units**.  
+> CV makes variation **relative**, not absolute.”
+
 
 ---
 
