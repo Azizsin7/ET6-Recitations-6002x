@@ -15,12 +15,12 @@
 > If you take **many samples** from **any population** (even if not normal),  
 > compute the **mean** of each sample,  
 > and plot those means — the result will be a **normal distribution** (bell curve),  
-> **if the sample size is large enough.**
+> **If the sample size is large enough.**
 
 ### ✅ Key Takeaways:
 - Applies to **sample means**, not raw values
 - Works even if original data is **uniform, skewed**, etc.
-- The **larger** the sample, the **closer** the distribution of means is to normal
+- The larger the sample, the more the average results look like a bell-shaped (normal) curve.
 
 ---
 
