@@ -4,8 +4,12 @@
 - But how about other types of distribution?
 - Spins of a **roulette wheel** are **not normally distributed**
 - They are **uniformly distributed** (each outcome equally probable)
-- However, we reason not about a **single spin**, but the **mean of a set of spins**
-- And the **Central Limit Theorem (CLT)** applies
+- However, we reason not about a **single spin**, but the **mean of a set of spins** and the **Central Limit Theorem (CLT)** applies
+
+  <p align="center">
+  <img src="Images/uniform.png" alt="Description" width="600"/>
+</p>
+
 
 ---
 
@@ -60,6 +64,10 @@ pylab.hist(means, numBins, color=color, label=legend,
 - Weights ensure the histogram shows probability, not raw count
 - This line visualizes the distribution of sample means
 - It should look normal (bell curve), even though the original die is uniform
+
+    <p align="center">
+  <img src="Images/uni_bell.png" alt="Description" width="600"/>
+</p>
 
 ## 💡 CLT Code Summary
 
