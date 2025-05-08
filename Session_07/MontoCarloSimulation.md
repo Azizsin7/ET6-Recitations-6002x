@@ -51,12 +51,85 @@
 | Simulation > Manual Methods | Code is faster, more accurate, and easier to repeat               |
 
 ---
-# 🎯 Monte Carlo Simulation: Estimating π Code
+# 🎯 Monte Carlo Simulation: Estimating π 
 
-### 👉 Core Idea:
+### Core Idea:
 - Generate random (x, y) points inside the square using:
+  
   ```python
   x = random.random()
   y = random.random()
+  
+  ```
+- Check if the point lies inside the circle:
 
+  ```python
+  if (x**2 + y**2)**0.5 <= 1.0
+  ```
+- If it does, count it. Then estimate π using:
+  ```python
+  pi ≈ 4 × (points inside circle / total points)
+  ```
+### 🔁 Code Snapshot: Simulating Needle Drops
+```python
+
+def throwNeedles(numNeedles):
+    inCircle = 0
+    for _ in range(numNeedles):
+        x, y = random.random(), random.random()
+        if (x**2 + y**2)**0.5 <= 1:
+            inCircle += 1
+    return 4 * (inCircle / numNeedles)
+```
+### 📏 Getting a Confident Estimate
+To avoid guessing how many points to simulate, we:
+- Run multiple trials with the same number of needles
+- Compute the average and the standard deviation (SD) of the estimates
+- Repeat with more needles until the SD is small enough
+```python
+def getEst(numNeedles, numTrials):
+    estimates = [throwNeedles(numNeedles) for _ in range(numTrials)]
+    sDev = numpy.std(estimates)
+    curEst = sum(estimates) / len(estimates)
+    return curEst, sDev
+```
+We aim for a 95% confidence interval:
+
+```python
+
+while sDev >= precision / 1.96:
+```
+## 🔍 Why More Needles Help
+
+| Needles | Std Dev ↓ | Estimate of π → Closer to true value?               |
+|---------|------------|------------------------------------------------------|
+| Fewer   | High       | Sometimes closer, but unreliable                    |
+| More    | Low        | Even if the estimate is slightly off, it’s more trustworthy |
+
+
+Even if one estimate with fewer needles looks better, it has a wider range of uncertainty.
+
+## ⚠️ Confidence vs. Correctness
+
+Low standard deviation (SD) means the simulation results are **consistent**, so we have **high confidence** in the estimate.
+
+But confidence ≠ correctness.
+
+> A simulation can be **precise but wrong** if the logic or formula is incorrect.
+
+### 🧪 Example:
+If you mistakenly compute π like this:
+```python
+return 2 * (inCircle / totalPoints)
+```
+Instead of 
+```python
+return 4 * (inCircle / totalPoints)
+```
+- You’ll get values close to π / 2, with low variation.
+- This gives you high confidence in the wrong result.
+
+## 🧠 Takeaway:
+- Always validate your simulation logic using known values or sanity checks.
+- Being consistently wrong is worse than being uncertain.
 
