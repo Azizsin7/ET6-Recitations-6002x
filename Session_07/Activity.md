@@ -26,9 +26,9 @@ Choose several sample sizes (e.g., 10, 30, 50). For each sample size:
   - Store the mean to analyze its distribution
 - Compute the **standard error** (SE) using the formula:
 
-\[
-SE = \frac{\text{standard deviation of sample means}}{\sqrt{n}}
-\]
+```
+Standard Error (SE) ≈ sample standard deviation / sqrt(n)
+```
 
 ---
 
