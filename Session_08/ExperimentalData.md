@@ -1,4 +1,6 @@
-# Lecture 10: Curve Fitting, Linear Regression & Model Evaluation
+# 🎓 Recitation #8 – MITx 6.00.2x
+
+## 🧭 Topic: Curve Fitting, Linear Regression & Model Evaluation
 
 ## Main Objectives
 - Understand how experimental data is analyzed using computational models.
