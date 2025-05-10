@@ -69,7 +69,7 @@ Where:
 - `yᵢ` = actual (observed) value  
 - `ŷᵢ` = predicted value on the line  
 
-The goal of least squares is to **choose the line's slope (`a`) and intercept (`b`)** to minimize this total error.
+The goal of least squares is to **find the line's slope (`a`) and intercept (`b`)** to minimize this total error.
 
 <p align="center">
   <img src="Images/Least.png" alt="Description" width="600"/>
