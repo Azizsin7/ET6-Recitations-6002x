@@ -47,25 +47,33 @@ y = 5 * 8 + 70 = 110
 
 ---
 
-## 4. Curve Fitting and Least Squares
+## What is Least Squares?
 
-When fitting a curve:
-- We map inputs `x` to outputs `y`
-- The **accuracy** of the fit is measured by how close predictions are to real values
-- The **least squares method** is most common
+Least squares is a method used to find the **best-fitting line (or curve)** for a set of data points by **minimizing the total squared vertical distance** between the data points and the line.
 
-**Error formula:**
+
+## Why “Least Squares”?
+
+Because it minimizes the **sum of the squares** of the errors:
+
+- The **error** = the vertical distance from a data point to the line  
+- We **square** each error so that:
+  - Positive and negative errors don’t cancel out  
+  - Bigger errors get penalized more
+
+### Mathematically:
 ```
-Sum over all i: (observed[i] - predicted[i])^2
+Total Error = (y₁ - ŷ₁)² + (y₂ - ŷ₂)² + ... + (yₙ - ŷₙ)²
 ```
+Where:
+- `yᵢ` = actual (observed) value  
+- `ŷᵢ` = predicted value on the line  
 
----
+The goal of least squares is to **choose the line's slope (`a`) and intercept (`b`)** to minimize this total error.
 
-## 5. Visualizing Least Squares
-
-- Each vertical line = error for one point
-- Best-fit line minimizes the **sum of squared errors**
-- Less total squared error = better model
+<p align="center">
+  <img src="Images/Last.png" alt="Description" width="600"/>
+</p>
 
 ---
 
