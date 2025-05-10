@@ -92,7 +92,9 @@ y = a * x + b  # linear
 
 ## 7. Mean Squared Error (MSE)
 
-**MSE** is a metric to evaluate model performance:
+> Least squares is a method used to determine the best-fit line or model, while mean squared error is a measure used to evaluate the accuracy or performance of that model by quantifying the average squared differences between predicted and observed values.
+
+- **MSE** is a metric to evaluate model performance:
 
 ```
 MSE = (1/n) * Sum( (actual - predicted)^2 )
@@ -101,14 +103,7 @@ MSE = (1/n) * Sum( (actual - predicted)^2 )
 - Lower MSE means better predictive accuracy
 - Often used to compare models
 
-**Python example:**
-```python
-def aveMeanSquareError(data, predicted):
-    error = 0.0
-    for i in range(len(data)):
-        error += (data[i] - predicted[i])**2
-    return error / len(data)
-```
+
 
 ---
 
