@@ -72,7 +72,7 @@ Where:
 The goal of least squares is to **choose the line's slope (`a`) and intercept (`b`)** to minimize this total error.
 
 <p align="center">
-  <img src="Images/Last.png" alt="Description" width="600"/>
+  <img src="Images/Least.png" alt="Description" width="600"/>
 </p>
 
 ---
