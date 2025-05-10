@@ -54,13 +54,44 @@ a, b = pylab.polyfit(xVals, yVals, 1)
 estYVals = a * xVals + b
 pylab.plot(xVals, estYVals, 'r', label=f'Linear fit, k = {round(1/a, 5)}')
 ```
-
 **Cleaner Version with polyval**:
 
 ```python
 model = pylab.polyfit(xVals, yVals, 1)
 estYVals = pylab.polyval(model, xVals)
 ```
+
+## Spring Example Based on Hooke's Law
+
+Hooke's Law:
+```
+F = -k * x
+```
+
+Where:
+- `F` is the **force** applied to the spring (in Newtons)
+- `x` is the **displacement** or stretch/compression distance (in meters)
+- `k` is the **spring constant**
+
+---
+
+### ✅ Variable Roles in the Experiment
+
+- **Independent Variable**: **Force (F)**  
+  → This is what you control by attaching different weights to the spring (mass × gravity).
+
+- **Dependent Variable**: **Displacement (x)**  
+  → This is what you measure — how much the spring stretches in response to the force.
+
+---
+
+### In Data Terms
+
+| Role            | Variable      | Why                            |
+|-----------------|---------------|---------------------------------|
+| Independent (X) | Force (F)      | You apply different values      |
+| Dependent (Y)   | Displacement (x) | You observe the result          |
+
 
 ---
 
