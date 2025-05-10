@@ -22,6 +22,10 @@ Where:
 
 ## 2. Visual Representation
 
+ <p align="center">
+  <img src="Images/reg.png" alt="Description" width="600"/>
+</p>
+
 - `y`: the dependent variable (target/prediction)
 - `x`: the independent variable (input/feature)
 - The **regression line** shows the predicted values
