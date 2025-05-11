@@ -1,8 +1,8 @@
-# 📘 Understanding Model Complexity, Overfitting, and Cross-Validation
+# Understanding Model Complexity, Overfitting, and Cross-Validation
 
 ---
 
-## 🔍 Why Fit a Model?
+## Why Fit a Model?
 
 We fit models for two main reasons:
 
@@ -11,9 +11,9 @@ We fit models for two main reasons:
 
 ---
 
-## 1. 🎯 Fitting Isn’t Everything
+## 1. Fitting Isn’t Everything
 
-### ✅ R² Measures Goodness of Fit — But Be Careful!
+### R² Measures Goodness of Fit — But Be Careful!
 
 - A **high R² on training data** means the model fits known data well.
 - But it doesn’t guarantee the model will perform well on **new data**.
@@ -22,26 +22,26 @@ We fit models for two main reasons:
 
 ---
 
-## 2. ⚠️ What Is Overfitting?
+## 2. What Is Overfitting?
 
-### 🔎 Definition:
+### Definition:
 
 > A model is **overfitting** when it captures noise instead of the true pattern.
 
-### 🧪 Example:
+### Example:
 
 - Fitting a **high-degree polynomial** to slightly noisy data can result in perfect training fit — but **poor prediction**.
 - Simpler models (like a line) may perform better even with a slightly worse training R².
 
 ---
 
-## 3. 🔁 How to Detect Overfitting — Use Cross-Validation
+## 3.How to Detect Overfitting — Use Cross-Validation
 
-### 🧠 Goal:
+### Goal:
 
 > Estimate how well your model performs on **unseen data**.
 
-### ✅ Techniques:
+### Techniques:
 
 | Method                        | Use When             | How It Works                                                                 |
 |------------------------------|----------------------|------------------------------------------------------------------------------|
@@ -51,13 +51,13 @@ We fit models for two main reasons:
 
 ---
 
-## 4. 📏 How to Choose Model Complexity
+## 4. How to Choose Model Complexity
 
-### 🎓 If you know the theory:
+### If you know the theory:
 
 - Use it. (E.g., Hooke’s Law ⇒ Linear model.)
 
-### 🤷 If you don’t know the theory:
+### If you don’t know the theory:
 
 Use **cross-validation** to:
 - Compare models of different complexity (e.g., degree 1, 2, 3)
@@ -66,7 +66,7 @@ Use **cross-validation** to:
 
 ---
 
-## 🧠 Key Principles to Remember
+## Key Principles to Remember
 
 | Concept            | Why It Matters                                              |
 |--------------------|-------------------------------------------------------------|
