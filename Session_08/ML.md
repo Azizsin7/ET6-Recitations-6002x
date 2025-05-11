@@ -62,7 +62,7 @@ Supervised learning uses **labeled data**: each feature vector has a correspondi
 - **Distance matrix** is used to find which animals are similar
 
 <p align="center">
-  <img src="Images/KNN.png" alt="Description" width="400"/>
+  <img src="Images/KNN.png" alt="Description" width="700"/>
 </p
  
 
@@ -80,17 +80,37 @@ Supervised learning uses **labeled data**: each feature vector has a correspondi
 
 ---
 
-## ⚠️ Feature Scaling
+## 🐊 Example: Classifying a Python, Zebra, and Alligator
 
-- Unequal value ranges can **distort distance calculations**
-- Example: `number_of_legs` (range 0–4) dominates binary features (0/1)
+Using **k = 3**:
+
+| Animal     | Nearest Neighbors                        | Reptile? | Correct? |
+|------------|------------------------------------------|----------|----------|
+| Zebra      | Dart Frog, Chicken, Guppy                | ❌       | ✅        |
+| Python     | Other snakes                             | ✅       | ✅        |
+| Alligator  | Dart Frog, Chicken, Cobra                | ❌       | ❌        |
+
+⚠️ **Problem:** Alligator was misclassified  
+🧠 Why? → **Feature scaling issue!**
+
+---
+
+## ⚖️ The Problem of Feature Scaling
+
+- Most features: binary (0 or 1)
+- **Legs**: ranges from 0 to 4 → **disproportionate influence**
+
+### ✅ Solution: Rescale Features
+
+1. **Binary Conversion**  
+   - Turn “number of legs” → “has legs” (0 or 1)
+   - Helped correct the classification in this example
 
 <p align="center">
-  <img src="Images/KNN3.png" alt="Description" width="400"/>
+  <img src="Images/KNN3.png" alt="Description" width="700"/>
 </p
  
-- **Fixes**:
-  - **Convert to binary** (e.g., has legs = 0/1)
+**Standard Scaling Techniques**:
   - **Z-scaling**: mean = 0, std = 1
   - **Min-max scaling**: values scaled to [0, 1]
 
@@ -129,3 +149,28 @@ A popular greedy clustering method that minimizes within-cluster dissimilarity.
 2. Assign each point to the nearest centroid (form clusters)
 3. Recompute centroids by averaging all points in a cluster
 4. Repeat steps 2–3 until centroids no longer move (convergence)
+```
+
+---
+
+## ✅ Summary of Machine Learning Concepts
+
+| **Concept**              | **Description**                                                    |
+|--------------------------|---------------------------------------------------------------------|
+| Feature Vector           | Numerical representation of an example                             |
+| Supervised Learning      | Learn from labeled data to predict unseen labels                   |
+| Unsupervised Learning    | Find patterns/groups in unlabeled data                              |
+| Distance Metrics         | Measure similarity (Euclidean, Manhattan)                          |
+| Feature Scaling          | Normalize features to ensure fair distance comparisons              |
+| k-Nearest Neighbors      | Predict label by voting among closest examples                      |
+| k-Means Clustering       | Group similar data points by minimizing within-group variance       |
+
+---
+
+## 📚 What's Next?
+
+This concludes our brief exploration of **Machine Learning** in this course. You are encouraged to:
+
+- 📖 Read the corresponding chapters in the textbook  
+- 🎓 Take a full ML course to go deeper into theory and applications  
+
