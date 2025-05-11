@@ -16,6 +16,7 @@ For each dataset:
 1. **Guess**: Do you think k-means would cluster this correctly?
 2. **Why do you think that?** (Try to explain what you see)
 
+
 <p align="center">
-  <img src="Images/K-means.png" alt="Description" width="400"/>
+  <img src="Images/K-means.png" alt="Description" width="900"/>
 </p
