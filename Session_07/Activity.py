@@ -1,4 +1,8 @@
+"""
+Created on Wed May  7 07:32:26 2025
 
+@author: somai
+"""
 import numpy as np
 import matplotlib.pyplot as plt
 
