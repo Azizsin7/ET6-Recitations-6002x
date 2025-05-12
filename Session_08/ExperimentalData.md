@@ -40,50 +40,46 @@ def plotData(fileName):
 
 ---
 
-## Segment 2: Linear Regression with Least Squares
+## 🔹 Segment 2: Linear Regression with Least Squares (Spring Example)
 
-**Concept**: Fit a line y = a * x + b to data using the least squares method.
+### 📌 Concept
+We fit a linear model of the form:
 
-**Why k = 1/a?**  
-Because a = displacement / force, so k = force / displacement = 1 / a
+\[
+y = a \cdot x + b
+\]
 
-**Code Example**: Fitting a line
+Using the **least squares method** to estimate `a` (slope) and `b` (intercept), which minimizes the total squared error between predicted and actual values.
 
-```python
-a, b = pylab.polyfit(xVals, yVals, 1)
-estYVals = a * xVals + b
-pylab.plot(xVals, estYVals, 'r', label=f'Linear fit, k = {round(1/a, 5)}')
-```
-**Cleaner Version with polyval**:
+---
 
-```python
-model = pylab.polyfit(xVals, yVals, 1)
-estYVals = pylab.polyval(model, xVals)
-```
+### ⚙️ Real-World Example: Hooke’s Law (Spring Force)
 
-## Spring Example Based on Hooke's Law
-
-Hooke's Law:
-```
-F = -k * x
-```
+**Hooke’s Law:**
+\[
+F = -k \cdot x
+\]
 
 Where:
-- `F` is the **force** applied to the spring (in Newtons)
-- `x` is the **displacement** or stretch/compression distance (in meters)
-- `k` is the **spring constant**
+- `F` is the force applied to the spring (in Newtons)
+- `x` is the displacement (stretch/compression in meters)
+- `k` is the spring constant (N/m)
 
 ---
 
-### ✅ Variable Roles in the Experiment
+### ✅ Variable Roles
 
-- **Independent Variable**: **Force (F)**  
-  → This is what you control by attaching different weights to the spring (mass × gravity).
+| Role                 | Variable   | Description                                                                 |
+|----------------------|------------|-----------------------------------------------------------------------------|
+| Independent Variable | `F`        | The force you apply (by hanging weights)                                   |
+| Dependent Variable   | `x`        | The measured stretch of the spring in meters (changes based on the force)  |
 
-- **Dependent Variable**: **Displacement (x)**  
-  → This is what you measure — how much the spring stretches in response to the force.
-
----
+Because:
+- The slope of the regression line `a` ≈ displacement / force →  
+- Then:  
+  \[
+  k = \frac{F}{x} = \frac{1}{a}
+  \]
 
 ### In Data Terms
 
@@ -92,6 +88,29 @@ Where:
 | Independent (X) | Force (F)      | You apply different values      |
 | Dependent (Y)   | Displacement (x) | You observe the result          |
 
+
+
+---
+
+### 💻 Code Snippet: Fitting the Spring Data
+
+```python
+a, b = pylab.polyfit(xVals, yVals, 1)  # Linear regression: y = a*x + b
+estYVals = a * xVals + b
+
+pylab.plot(xVals, estYVals, 'r', label=f'Linear fit, k = {round(1/a, 5)}')
+```
+Or using polyval() for cleaner prediction:
+
+```python
+model = pylab.polyfit(xVals, yVals, 1)
+estYVals = pylab.polyval(model, xVals)
+```
+### 📌 Interpretation
+The fitted line represents how displacement (x) changes with applied force (F).
+From the slope, we can calculate the spring constant k as:
+
+k= 1/a
 
 ---
 
