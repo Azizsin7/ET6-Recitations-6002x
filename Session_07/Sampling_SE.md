@@ -40,6 +40,10 @@ makeHist(sampleMeans, 'Means of Samples', 'Mean', 'Frequency')
 pylab.axvline(x=popMean, color='r')  # Red line shows the population mean
 ```
 
+<p align="center">
+  <img src="Images/p2.png" alt="Description" width="700"/>
+</p
+
 This histogram shows:
 - Sample means form a **bell-shaped curve**
 - The red line (population mean) lies near the center
