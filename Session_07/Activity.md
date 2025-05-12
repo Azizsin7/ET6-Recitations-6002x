@@ -42,8 +42,50 @@ Standard Error (SE) ≈ sample standard deviation / sqrt(n)
 ## 4️⃣ Observations and Discussion
 
 - How does the **spread** of sample means change with larger sample sizes?
+  <details>
+  <summary>🔍 Show Answer</summary>
+  In your simulation, the spread of the sample means (i.e., how wide the histogram is) becomes narrower as the sample size increases from 10 to 30 
+  to 50.
+  
+  This is because:
+  
+  Larger samples reduce the impact of extreme values (which are common in an exponential distribution).
+  
+  Each larger sample gives a better estimate of the population mean, so the variability between sample means decreases.
+  
+  You can visually see this in your histograms — the one for sample size 10 is wider and more spread out, while the one for 50 is tighter around 
+  the mean.
+  </details>
+  
 - What do the **error bars** tell us about the **precision** of the sample mean?
+  <details>
+  <summary>🔍 Show Answer</summary>
+  The error bars you plotted using plt.errorbar() show ±1 standard error (SE) around the average of the sample means.
+
+  From the code:
+
+  ```python
+  std_err = np.std(sample_means, ddof=1) / np.sqrt(size)
+  ```
+  For larger sample sizes, this SE gets smaller. That means the sample mean is more precise — it’s closer to the true population mean more 
+  consistently. So the error bars visually show us how confidence improves with more data per sample.
+
+
 - How does this relate to the **Central Limit Theorem**?
+
+  <details>
+  <summary>🔍 Show Answer</summary>
+  Even though your population data is exponentially distributed (highly skewed), the distribution of the sample means becomes approximately 
+   normal — especially for larger sample sizes. This is exactly what the Central Limit Theorem (CLT) predicts:
+  
+  - Regardless of the original distribution, the distribution of sample means tends toward normal as sample size increases.
+  
+  - You can see this in your histograms: the shape of the sample mean distribution looks more bell-shaped as you go from size 10 → 30 → 50.
+  
+  - Also, the decrease in SE with increasing sample size matches the CLT’s prediction that:      SE ∝ 1 / √n
+
+​
+
 
 ---
 
