@@ -44,7 +44,9 @@ This guide is meant to help you process and clarify the key ideas from the lectu
 
 - To show that, without randomness, the method fails
 - Reinforces the importance of independence and uniform randomness
-⚠️ Takeaway: Don't mistake dramatization for real data collection — use code for reliable simulations.
+  
+⚠️ Takeaway:
+- Don't mistake dramatization for real data collection — use code for reliable simulations.
 ---
 ### ❌ Intentional Mistake: Using 2 Instead of 4
 **What’s happening?**
