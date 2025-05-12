@@ -45,9 +45,7 @@ def plotData(fileName):
 ### 📌 Concept
 We fit a linear model of the form:
 
-\[
-y = a \cdot x + b
-\]
+y = a * x + b
 
 Using the **least squares method** to estimate `a` (slope) and `b` (intercept), which minimizes the total squared error between predicted and actual values.
 
@@ -56,9 +54,8 @@ Using the **least squares method** to estimate `a` (slope) and `b` (intercept), 
 ### ⚙️ Real-World Example: Hooke’s Law (Spring Force)
 
 **Hooke’s Law:**
-\[
-F = -k \cdot x
-\]
+
+F = -k * x
 
 Where:
 - `F` is the force applied to the spring (in Newtons)
