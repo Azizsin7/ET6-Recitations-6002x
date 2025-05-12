@@ -1,4 +1,4 @@
-# 🎓 Recitation #8 – MITx 6.00.2x
+# 🎓 Recitation #10 – MITx 6.00.2x
 
 ## 🧭 Topic: Curve Fitting, Linear Regression & Model Evaluation
 
