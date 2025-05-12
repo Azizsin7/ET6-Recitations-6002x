@@ -121,26 +121,3 @@ That is:
   numTrials = 1000 // 10 = 100
 ```
 → We perform 100 trials, and we compute 100 sample means
-
-## 🧠 Full Example:
-```python
-
-numDice = 10
-numRolls = 1000
-```
-- Total dice rolled = 1000
-- Dice per trial = 10
-- Number of trials = 1000 // 10 = 100
-- So, we compute 100 sample means → plotted in a histogram
-
-## 📝 Summary Table
-
-| Parameter   | Meaning                   | Affects                                      |
-|-------------|----------------------------|----------------------------------------------|
-| `numDice`   | Sample size in each trial | Std. deviation of sample means ↓ with size   |
-| `numRolls`  | Total dice to roll        | Number of trials (how many histogram bars)   |
-
-
-
-
-
