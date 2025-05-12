@@ -81,18 +81,6 @@ pylab.hist(means, numBins, color=color, label=legend,
 
 ---
 ## 🎲 Difference Between numDice and numRolls
-🔢 numDice = Number of dice per trial
-- Controls the sample size
-- Each trial rolls numDice times and averages the result
-
-Examples: 
-- numDice = 1 → 1 die → 1 number → 1 sample mean
-- numDice = 50 → 50 dice → averaged → 1 sample mean
-
-🔁 numRolls = Total dice rolled across all trials
-Controls the total number of samples collected
-
-# 🎲 Understanding the Difference Between `numDice` and `numRolls`
 
 In the `plotMeans(...)` function, two key parameters determine how sampling is done:
 
