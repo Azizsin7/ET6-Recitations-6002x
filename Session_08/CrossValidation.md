@@ -47,7 +47,10 @@ We fit models for two main reasons:
 |------------------------------|----------------------|------------------------------------------------------------------------------|
 | **Leave-One-Out**            | Small datasets       | Train on all-but-one, test on the one. Repeat for all points.               |
 | **K-Fold**                   | Medium–large datasets| Split into *k* parts. Train on *k–1*, test on the rest. Rotate.              |
-| **Repeated Random Sampling** | Large datasets       | Randomly split into train/test multiple times. Average results.             |
+
+### 🔁 Analogy:
+- LOOCV: You carefully test every single item individually.
+- K-Fold: You divide your work into chunks and rotate each as the test group.
 
 ---
 
