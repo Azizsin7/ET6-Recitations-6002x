@@ -49,8 +49,6 @@ y = a * x + b
 
 Using the **least squares method** to estimate `a` (slope) and `b` (intercept), which minimizes the total squared error between predicted and actual values.
 
----
-
 ### ⚙️ Real-World Example: Hooke’s Law (Spring Force)
 
 **Hooke’s Law:**
@@ -62,7 +60,6 @@ Where:
 - `x` is the displacement (stretch/compression in meters)
 - `k` is the spring constant (N/m)
 
----
 
 ### ✅ Variable Roles
 
@@ -71,43 +68,60 @@ Where:
 | Independent Variable | `F`        | The force you apply (by hanging weights)                                   |
 | Dependent Variable   | `x`        | The measured stretch of the spring in meters (changes based on the force)  |
 
-Because:
-- The slope of the regression line `a` ≈ displacement / force →  
-- Then:  
-  \[
-  k = \frac{F}{x} = \frac{1}{a}
-  \]
 
-### In Data Terms
+### Interpreting the Regression Slope in Hooke’s Law
+In our spring experiment, we're trying to understand how force affects displacement using Hooke’s Law:
 
-| Role            | Variable      | Why                            |
-|-----------------|---------------|---------------------------------|
-| Independent (X) | Force (F)      | You apply different values      |
-| Dependent (Y)   | Displacement (x) | You observe the result          |
+```
+𝐹 = 𝑘 * 𝑥 or rearranged: 𝑥 = 1/𝑘 * F
+```
+This tells us:
 
+- When you apply more force (F), the spring stretches (x)
+- The constant k (spring stiffness) determines how much stretch happens per unit of force
 
+### 📊 What Does the Regression Line Tell Us?
+In our regression model, we place:
 
----
+- Force (F) on the x-axis (independent variable)
+
+- Displacement (x) on the y-axis (dependent variable)
+
+ When we fit a line:
+
+       x= a* F+ b
+
+The slope a from the regression line tells us how displacement changes with force, just like the 1/k in Hooke’s Law.
+
+      a ≈ 1/K  ⇒ k ≈ 1/a
+​
 
 ### 💻 Code Snippet: Fitting the Spring Data
 
 ```python
-a, b = pylab.polyfit(xVals, yVals, 1)  # Linear regression: y = a*x + b
+# Assume xVals = force values (F), and yVals = displacement values (x)
+# Fit a linear model: y = a * x + b
+a, b = pylab.polyfit(xVals, yVals, 1)
+# Generate predicted values using the fitted model
 estYVals = a * xVals + b
 
+# Plot the data and the fitted line
+# The slope 'a' corresponds to 1/k, so we compute k = 1 / a
 pylab.plot(xVals, estYVals, 'r', label=f'Linear fit, k = {round(1/a, 5)}')
-```
-Or using polyval() for cleaner prediction:
 
-```python
-model = pylab.polyfit(xVals, yVals, 1)
-estYVals = pylab.polyval(model, xVals)
+# Optionally: a cleaner version using polyval
+model = pylab.polyfit(xVals, yVals, 1)        # model = [a, b]
+estYVals = pylab.polyval(model, xVals)        # evaluates a*x + b for each x
 ```
+
 ### 📌 Interpretation
-The fitted line represents how displacement (x) changes with applied force (F).
-From the slope, we can calculate the spring constant k as:
 
-k= 1/a
+- This regression fits the equation:  
+  	 `displacement = a * force + b`
+- Based on Hooke’s Law:  
+  	 `x = (1/k) * F` → `a ≈ 1/k`
+- Therefore, we calculate the spring constant as:  
+  	 `k = 1 / a`
 
 ---
 
