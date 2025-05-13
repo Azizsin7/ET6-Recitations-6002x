@@ -190,21 +190,6 @@ def rSquared(observed, predicted):
 
 ---
 
-## Caution: Overfitting
-
-Higher-degree polynomials may improve R2 on training data but perform worse on new data.  
-Visual cues and high R2 don't always indicate a good model — evaluate in context.
-
-**Fitting multiple polynomial models**
-
-```python
-degrees = (2, 4, 8, 16)
-models = genFits(xVals, yVals, degrees)
-testFits(models, degrees, xVals, yVals, 'Mystery Data')
-```
-
----
-
 ## Summary Table
 
 | Tool / Term           | Purpose                                   | Code Usage                         |
