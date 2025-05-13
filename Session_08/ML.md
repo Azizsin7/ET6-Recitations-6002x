@@ -61,44 +61,52 @@ Supervised learning uses **labeled data**: each feature vector has a correspondi
 - Labels indicate reptile (`1`) or not (`0`)
 - **Distance matrix** is used to find which animals are similar
 
+
+
+---
+
+## 🐊 Alligator Misclassification in k-NN — Explained with Distance Matrix
+
+Although the alligator **is a reptile**, the k-NN algorithm **misclassified it** due to biased distance calculations.
+
+### 🔍 Using the Distance Matrix
+
+From the row labeled `alligator`, the **3 nearest neighbors** (smallest Euclidean distances) are:
+
+1. **Dart frog** → 1.732 (label = 0, not a reptile)  
+2. **Chicken** → 2.0 (label = 0, not a reptile)  
+3. **Python** → 4.0 (label = 1, reptile)
+
+### 🗳️ k = 3 Majority Vote
+
+- 2 out of 3 neighbors = not reptiles  
+- 1 out of 3 = reptile  
+➡️ **Predicted label: 0 (not a reptile)**  
+➡️ ❌ **Incorrect prediction**
+
 <p align="center">
-  <img src="Images/KNN.png" alt="Description" width="700"/>
+  <img src="Images/reptil.png" alt="Description" width="900"/>
 </p
  
 
-#### 📌 Nearest Neighbor (kNN) Classification
+---
 
-- **1-NN**: Assign label of the single closest training point
-- **k-NN** (e.g., k=3): Take the **majority vote** among the k nearest neighbors
+### ⚠ Why Did This Happen?
 
-### ✅ Pros and Cons of kNN
-
-| Pros                                       | Cons                                      |
-|--------------------------------------------|-------------------------------------------|
-| Simple, no training required               | Memory-intensive                          |
-| Easy to explain and justify decisions      | Slow predictions; no interpretable model  |
+- The feature **"number of legs"** ranges from 0 to 4.
+- This had a **much larger impact** on Euclidean distance than binary features (0 or 1).
+- Since the alligator has **4 legs**, it appeared *closer* to other 4-legged animals (chicken, dart frog) than to snakes (which have 0 legs).
 
 ---
 
-## 🐊 Example: Classifying a Python, Zebra, and Alligator
+### ✅ Solution Shown in Lecture
 
-Using **k = 3**:
+- Replace `"number of legs"` with a **binary feature**: `has legs` (0 or 1)
+- This made **all features comparable** in scale.
+- 🧠 After adjustment, the 3-nearest neighbors included more reptiles.
+- ✅ Result: **Alligator was correctly classified as a reptile**
 
-| Animal     | Nearest Neighbors                        | Reptile? | Correct? |
-|------------|------------------------------------------|----------|----------|
-| Zebra      | Dart Frog, Chicken, Guppy                | ❌       | ✅        |
-| Python     | Other snakes                             | ✅       | ✅        |
-| Alligator  | Dart Frog, Chicken, Cobra                | ❌       | ❌        |
 
-⚠️ **Problem:** Alligator was misclassified  
-🧠 Why? → **Feature scaling issue!**
-
----
-
-## ⚖️ The Problem of Feature Scaling
-
-- Most features: binary (0 or 1)
-- **Legs**: ranges from 0 to 4 → **disproportionate influence**
 
 ### ✅ Solution: Rescale Features
 
@@ -109,11 +117,11 @@ Using **k = 3**:
 <p align="center">
   <img src="Images/KNN3.png" alt="Description" width="700"/>
 </p
- 
-**Standard Scaling Techniques**:
-  - **Z-scaling**: mean = 0, std = 1
-  - **Min-max scaling**: values scaled to [0, 1]
 
+<p align="center">
+  <img src="Images/KNN.png" alt="Description" width="700"/>
+</p
+ 
 ---
 
 ## 🔍 Unsupervised Learning
