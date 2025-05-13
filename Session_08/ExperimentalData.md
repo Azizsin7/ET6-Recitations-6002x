@@ -140,22 +140,52 @@ def aveMeanSquareError(data, predicted):
         error += (data[i] - predicted[i])**2
     return error / len(data)
 ```
+## 📏 R-squared (R²) – Coefficient of Determination
+
+**Formula:**
+
+R² = 1 - (SS_res / SS_tot)
+
+Where:
+- **SS_res** = ∑(yᵢ - ŷᵢ)² → sum of squared residuals (prediction errors)
+- **SS_tot** = ∑(yᵢ - ȳ)² → total variance in the observed data
+
+## 📏 Adjusted R-squared (R²) – Matching Code Implementation
+
+**Formula:**
+
+R² = 1 - (MSE / Var(y))
+
+Where:
+- **MSE** = Mean Squared Error = average of (yᵢ - ŷᵢ)²
+- **Var(y)** = variance of observed values = average of (yᵢ - ȳ)²
+
+**Explanation:**
+
+- This form of R² still measures how much of the variance in the data is explained by the model.
+- It’s mathematically equivalent to the standard formula but expressed in terms of **averages** instead of total sums.
+
+Use this when your code uses `numpy.var(...)` and divides by the number of samples (n).
+
+
 
 **Code Example**: R-squared
 
 ```python
+# ⚠️ This version uses a simplified R² calculation.
+# It is mathematically valid, but less transparent than the full SS_res / SS_tot formula.
+
 def rSquared(observed, predicted):
+    # Step 1: Calculate total squared error between predictions and actual values (SS_res)
     error = ((predicted - observed)**2).sum()
+    
+    # Step 2: Compute the mean squared error (MSE)
     meanError = error / len(observed)
+    
+    # Step 3: Divide MSE by variance of observed values (numpy.var returns SS_tot / n)
+    # Then subtract from 1 to get R²
     return 1 - (meanError / numpy.var(observed))
-```
 
-**Fitting multiple polynomial models**
-
-```python
-degrees = (2, 4, 8, 16)
-models = genFits(xVals, yVals, degrees)
-testFits(models, degrees, xVals, yVals, 'Mystery Data')
 ```
 
 ---
@@ -164,6 +194,14 @@ testFits(models, degrees, xVals, yVals, 'Mystery Data')
 
 Higher-degree polynomials may improve R2 on training data but perform worse on new data.  
 Visual cues and high R2 don't always indicate a good model — evaluate in context.
+
+**Fitting multiple polynomial models**
+
+```python
+degrees = (2, 4, 8, 16)
+models = genFits(xVals, yVals, degrees)
+testFits(models, degrees, xVals, yVals, 'Mystery Data')
+```
 
 ---
 
