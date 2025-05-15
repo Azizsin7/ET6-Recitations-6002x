@@ -54,7 +54,7 @@ A simulation:
 The following image plots the population of the US over time, along with a model fit to the data. This is an example of points linearly from 1900 to 2000 and a red line fitted to the points that dips to 0 from x=2000 to x=2050.
 
 <p align="center">
-  <img src="Images/over.png" alt="Description" width="600"/>
+  <img src="Images/over.png" alt="Description" width="400"/>
 </p>
 
 
