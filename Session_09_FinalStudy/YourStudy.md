@@ -64,7 +64,8 @@ The following image plots the population of the US over time, along with a model
 
 <details>
   <summary>Answer</summary>
-  **Correct Answer:** overfitting
+  
+  **overfitting:** 
   Explanation: The model is overly complex and fits the noise in the data (bends to zero after 2000), which is characteristic of overfitting.
 </details>
 
@@ -78,10 +79,11 @@ If the R-squared of a model produced using linear regression is 0.7, the model a
 - False
 
 <details>
-  <summary>Answer/summary>
+  <summary>Answer</summary>
     
   **True:** 
-  Explanation: R-squared represents the proportion of variance in the dependent variable that is explained by the independent variables in the model. A value of 0.7 means 70% of the variance is explained.
+  R-squared represents the proportion of variance in the dependent variable that is explained by the independent variables in the model. A value 
+  of 0.7 means 70% of the variance is explained.
 </details>
 
 ---
@@ -97,6 +99,6 @@ Given a finite set of data points, there exists a polynomial fit such that the p
   <summary>Answer</summary>
   
   **False:** 
-   Explanation: While it is possible to fit a polynomial to pass through every data point, it is generally undesirable, especially with noisy data, as it leads to overfitting. A model that fits the data too closely may fail to generalize to new data.
+  While it is possible to fit a polynomial to pass through every data point, it is generally undesirable, especially with noisy data, as it leads to overfitting. A model that fits the data too closely may fail to generalize to new data.
 </details>
 
