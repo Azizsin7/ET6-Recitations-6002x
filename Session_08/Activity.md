@@ -32,8 +32,19 @@ You do not need to be "correct" — this is about practicing your reasoning base
 - It **may not work well** if clusters are oddly shaped or overlapping.
 
 
-
-
 <p align="center">
   <img src="Images/K-means.png" alt="Description" width="900"/>
 </p
+
+<details>
+  <summary>Answer</summary>
+   
+  | Dataset | Will K-Means Work? | Why? (Based on What We Learned) |
+  |---------|--------------------|---------------------------------|
+  | A       | ❌ No              | The shape looks like an “S” and is curved — k-means prefers round or blob-like clusters. |
+  | B       | ❌ No              | There’s a ring with points inside it. K-means might mix the ring and center together. |
+  | C       | ✅ Yes             | These look like three separate, roundish groups. K-means should work well here. |
+  | D       | ❌ No              | The triangle shape has irregular density and open space — k-means may not separate it meaningfully. |
+  | E       | ✅ Yes             | The groups are spaced apart and look compact — k-means should cluster them correctly. |
+  
+</details>
