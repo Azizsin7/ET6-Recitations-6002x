@@ -5,7 +5,6 @@ import pylab
 MAXRABBITPOP = 1000
 CURRENTRABBITPOP = 500
 CURRENTFOXPOP = 30
-
 def rabbitGrowth():
     """ 
     rabbitGrowth is called once at the beginning of each time step.
@@ -22,7 +21,10 @@ def rabbitGrowth():
     global CURRENTRABBITPOP
 
     # TO DO
-    pass
+    #pass
+    for i in range(CURRENTRABBITPOP):
+        if random.random() <= (1 - (CURRENTRABBITPOP/MAXRABBITPOP)):
+            CURRENTRABBITPOP += 1
             
 def foxGrowth():
     """ 
@@ -45,8 +47,18 @@ def foxGrowth():
     global CURRENTFOXPOP
 
     # TO DO
-    pass
-    
+    #pass
+    for i in range(CURRENTFOXPOP):
+        if CURRENTRABBITPOP > 10:
+            if random.random() <= (CURRENTRABBITPOP/MAXRABBITPOP):
+                CURRENTRABBITPOP -= 1
+                # fox reproducing
+                if random.random() <= (1/3):
+                    CURRENTFOXPOP += 1
+        else:
+            # fox dying
+            if random.random() <= 0.1:
+                CURRENTFOXPOP -= 1
             
 def runSimulation(numSteps):
     """
@@ -60,5 +72,15 @@ def runSimulation(numSteps):
     Both lists should be `numSteps` items long.
     """
 
-    # TO DO
-    pass
+    rabbits = []
+    foxes = []
+    for i in range(numSteps):
+        rabbitGrowth()
+        foxGrowth()
+        rabbits.append(CURRENTRABBITPOP)
+        foxes.append(CURRENTFOXPOP)
+    return rabbits, foxes
+
+runSimulation(10)
+#runSimulation(20)
+#runSimulation(1000)
