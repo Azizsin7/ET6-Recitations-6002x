@@ -17,17 +17,29 @@ def find_combination(choices, total):
     """
     
     # Try to find combinations that exactly match the total
+    for i in range(1, len(choices) + 1):
+        for seq in itertools.combinations(enumerate(choices), i):
+            if sum(x[1] for x in seq) == total:
+                result = np.zeros(len(choices), dtype=int)
+                for index, _ in seq:
+                    result[index] = 1
+                return result
 
+    # If no exact match is found, pick the closest sum without exceeding the total
+    best_result = None
+    closest_sum = 0
+    
+    for i in range(1, len(choices) + 1):
+        for seq in itertools.combinations(enumerate(choices), i):
+            current_sum = sum(x[1] for x in seq)
+            if current_sum <= total and current_sum > closest_sum:
+                closest_sum = current_sum
+                best_result = np.zeros(len(choices), dtype=int)
+                for index, _ in seq:
+                    best_result[index] = 1
 
+    return best_result
 
-
-
-
-    # If no exact match is found, pick the closest sum without exceeding the total => APPLY GREEDY 
-
-
-
-   
 # Example usage:
 print(find_combination([1], 10))                             #array([1])
 print(find_combination([1, 81, 3, 102, 450, 10], 9))         #array([1, 0, 1, 0, 0, 0])
